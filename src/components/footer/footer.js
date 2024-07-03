@@ -61,39 +61,39 @@ const Footer = () => {
       title: 'Company',
       data: [
         { link: '/AboutUs', text: 'About Us' },
-        { link: '#', text: 'Delivery Information' },
+        { link: '*', text: 'Delivery Information' },
         { link: '/privacy-policy', text: 'Privacy Policy' },
         { link: '/termsandconditions', text: 'Terms & Conditions' },
-        { link: '#', text: 'Contact Us' },
+        { link: '/contact', text: 'Contact Us' },
         { link: '/faq', text: 'FAQ' },
         { link: '/feedback', text: 'Feedback' },
-        { link: '#', text: 'Contributors' }
+        { link: '/contributors', text: 'Contributors' }
       ]
     },
     {
       title: 'Corporate',
       data: [
         { link: '/AboutUs', title: 'About Us' },
-        { link: '#', title: 'Delivery Information' },
+        { link: '*', title: 'Delivery Information' },
         { link: '/privacy-policy', text: 'Privacy Policy' },
         { link: '/termsandconditions', text: 'Terms & Conditions' },
-        { link: '#', text: 'Contact Us' },
-        { link: '#', text: 'Support Center' },
-        { link: '#', text: 'Careers' },
-        { link: '#', text: 'Contributors' }
+        { link: '/contact', text: 'Contact Us' },
+        { link: '*', text: 'Support Center' },
+        { link: '*', text: 'Careers' },
+        { link: '/contributors', text: 'Contributors' }
       ]
     },
     {
       title: 'Popular',
       data: [
         { link: '/AboutUs', text: 'About Us' },
-        { link: '#', text: 'Delivery Information' },
+        { link: '*', text: 'Delivery Information' },
         { link: '/privacy-policy', text: 'Privacy Policy' },
         { link: '/termsandconditions', text: 'Terms & Conditions' },
-        { link: '#', text: 'Contact Us' },
-        { link: '#', text: 'Support Center' },
-        { link: '#', text: 'Careers' },
-        { link: '#', text: 'Contributors' }
+        { link: '/contact', text: 'Contact Us' },
+        { link: '*', text: 'Support Center' },
+        { link: '*', text: 'Careers' },
+        { link: '/contributors', text: 'Contributors' }
       ]
     }
   ];

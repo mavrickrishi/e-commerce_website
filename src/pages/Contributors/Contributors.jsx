@@ -7,6 +7,7 @@ function Contributors() {
   const [contributors, setContributors] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     async function fetchContributors() {
       try {
         const response = await axios.get(
