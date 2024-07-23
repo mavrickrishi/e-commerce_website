@@ -185,7 +185,7 @@ const SignIn = () => {
               <CircularProgress color="inherit" />
             </Backdrop>
 
-            <h3 className="text-center h-size">Sign In</h3>
+            <h3 className="text-center signin_head h-size">Sign In</h3>
             <form className="mt-4">
               <div className="form-group mb-4 w-100">
                 <TextField
@@ -232,7 +232,7 @@ const SignIn = () => {
           ,}}
                   />
                   <Button
-                    className="icon"
+                    className="icon back_icon"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword === false ? (
@@ -258,28 +258,28 @@ const SignIn = () => {
                 </div>
               )}
 
-              <div className="form-group mt-3 mb-4 w-100 d-flex justify-content-end">
-                <Button
-                  className="btn btn-link float-end"
+              <div className="form-group mt-1 mb-1 w-100 d-flex justify-content-end">
+                <p
+                  className="forgot_pass"
                   onClick={forgotPassword}
                   sx={{fontSize:"1.3rem"}}
                 >
                   Forgot Password?
-                </Button>
+                </p>
               </div>
 
-              <div className="form-group mt-5 mb-4 w-100">
+              <div className="form-group  mt-1 mb-4 w-100">
                 <Button
                   disabled={isDisabled}
-                  className="btn btn-g btn-lg w-100 "
+                  className="btn  sign_in_but btn-g btn-lg w-100 "
                   onClick={signIn}
                 >
                   Sign In
                 </Button>
               </div>
 
-              <div className="form-group  mb-4 w-100 signInOr  " >
-                <p className="text-center">OR</p>
+              <div className="form-group  mb-2 w-100 signInOr  " >
+               <div className='or_contain'> <p className="text-center">OR</p></div>
                 <Button
                   className="w-100"
                   variant="outlined"
@@ -289,10 +289,10 @@ const SignIn = () => {
                 </Button>
               </div>
 
-              <p className="text-center" style={{fontSize:"1.6rem",cursor:"auto"}}>
+              <p className="text-center mt-4" style={{fontSize:"1.6rem",cursor:"auto"}}>
                 Don't have an account?{' '}
                 <b>
-                  <Link to="/signup" >Sign Up</Link>
+                  <Link to="/signup " className='signin_link' >Sign Up</Link>
                 </b>
               </p>
             </form>

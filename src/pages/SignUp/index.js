@@ -327,7 +327,7 @@ const SignUp = () => {
               <CircularProgress color="inherit" />
             </Backdrop>
 
-            <h3 className="text-center h-size" style={{color:"#3bb77e"}}>SignUp</h3>
+            <h3 className="text-center signin_head h-size" >SignUp</h3>
             <form className="mt-4 w-100">
               <div className="form-group mb-4 w-100">
                 <TextField
@@ -432,7 +432,7 @@ const SignUp = () => {
               </div>
 
               {otpCount < OTP_LIMIT && (
-                <div className="form-group mb-4 w-100">
+                <div className="form-group  w-100">
                   <TextField
                     id="phoneNumber"
                     type="tel"
@@ -456,14 +456,14 @@ const SignUp = () => {
                       {inputErrors.phoneNumber}
                     </Typography>
                   )}
-                  <Button
+                  <p
                     onClick={handleSendOtp}
                     style={{fontSize:"1.5rem",marginTop:"20px"}}
-                
+                    className='send_otp'
                     disabled={!validatePhoneNumber(formFields.phoneNumber)}
                   >
                     Send OTP
-                  </Button>
+                  </p>
                 </div>
               )}
 
@@ -493,10 +493,10 @@ const SignUp = () => {
                 </div>
               )}
 
-              <div className="form-group mt-5 mb-4 w-100">
+              <div className="form-group  mb-4 w-100">
                 <Button
                   disabled={isDisabled}
-                  className="btn btn-g btn-lg w-100"
+                  className="btn sign_in_but btn-g btn-lg w-100"
                   onClick={signUp}
                 >
                   Sign Up
@@ -506,7 +506,7 @@ const SignUp = () => {
               <p className="text-center" style={{fontSize:"1.6rem",cursor:"auto"}}>
                 Already have an account?
                 <b>
-                  <Link to="/signIn">Sign In</Link>
+                  <Link to="/signIn" className='signin_link'>Sign In</Link>
                 </b>
               </p>
             </form>
