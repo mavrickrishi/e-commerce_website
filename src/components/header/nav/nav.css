@@ -108,15 +108,23 @@
 .nav nav .dropdown_menu {
   position: absolute;
   top: 150%;
+  margin-top: -8px;
   left: 0;
   width: 300px;
   background: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  padding: 10px 0;
+  padding: 10px 0px;
   z-index: 100;
   opacity: 0;
   visibility: hidden;
   transition: all 0.1s ease-in-out;
+}
+.shpmenu{
+  margin-top: -15px !important;
+  padding: 40px 50px !important;
+}
+.nav nav .dropdown_menu .row{
+  align-items: flex-start !important;
 }
 
 .nav nav .dropdown_menu li {
@@ -143,8 +151,9 @@
 .nav nav .all_menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 20px;
   width: 35vw;
+  margin-top: -9px;
   background: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 10px 0;
@@ -153,7 +162,18 @@
   visibility: hidden;
   transition: all 0.1s ease-in-out;
 }
-
+.list_item_nav{
+  padding: 10px 20px ;
+}
+.list_item_nav a{
+  color: #191717 !important;
+  text-decoration: none !important;
+  font-size: 24px !important;
+  text-transform: capitalize;
+}
+.list_item_nav a:hover{
+  color: #267550!important;
+}
 .nav nav .all_menu.browse_menu {
   width: 50vw;
 }
@@ -194,13 +214,15 @@
 
 .text-beox {
   color: #191717;
-  font-size: 16px;
+  font-size: 22px !important;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
 }
-
+.green-icon{
+  width: 50px;
+}
 .set-box:hover .text-beox {
   color: #267550;
 }
@@ -234,4 +256,8 @@
   color: rgba(0, 0, 0, 0.7);
   font-size: 25px;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.megaMenu .col ul li a:hover{
+  font-weight: 600 !important;
 }

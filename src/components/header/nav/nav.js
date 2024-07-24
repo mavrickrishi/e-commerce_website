@@ -215,14 +215,19 @@ const Nav = (props) => {
                           >
                             <ul>
                               {item.items.map((item_, index_) => (
-                                <li key={index_}>
-                                  <Button
+                                <li key={index_} onClick={() => {
+                                  props.closeNav();
+                                  setDropdownMenu(!openDropdownMenu);
+                                  setDropdownMenuIndex(null);}}
+                                  className='list_item_nav'
+                                  >
+                                  {/* <Button
                                     onClick={() => {
                                       props.closeNav();
                                       setDropdownMenu(!openDropdownMenu);
                                       setDropdownMenuIndex(null);
                                     }}
-                                  >
+                                  > */}
                                     <a
                                       href={`/cat/${item.cat_name.toLowerCase()}/${item_.cat_name
                                         .replace(/\s/g, '-')
@@ -236,7 +241,7 @@ const Nav = (props) => {
                                     >
                                       {item_.cat_name}
                                     </a>
-                                  </Button>
+                                  {/* </Button> */}
                                 </li>
                               ))}
                             </ul>
@@ -268,7 +273,7 @@ const Nav = (props) => {
                       </Link>
                     </Button>
                     <div
-                      className={`dropdown_menu megaMenu w-100 ${
+                      className={`dropdown_menu megaMenu shpmenu w-100 ${
                         openMegaMenu === true && 'open'
                       }`}
                     >
