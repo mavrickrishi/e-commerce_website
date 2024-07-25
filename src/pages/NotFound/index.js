@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.css';
 import NotFoundImg from '../../assets/images/page-404.webp';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const NotFound = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+
+    return ()=>{
+      window.scrollTo(0,0);
+    }
+  },[])
   return (
     <section className="notFound">
       <div className="container-fluid">
