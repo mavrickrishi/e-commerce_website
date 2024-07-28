@@ -1,69 +1,18 @@
 .footerWrapper {
-  padding: 45px 0px;
+  padding: 45px 0;
   width: 100%;
-  background-color: #3bb77e;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.footer-grid h3 {
-  font-size: 22px;
-  color: #fff;
-}
-
-.footer-grid li a {
-  font-weight: 700;
-  font-size: 18px;
-  color: #000;
-  opacity: 0.8;
-  transition: all 0.2s ease-in-out;
-}
-
-.footer-grid li a:hover {
-  opacity: 1;
-  text-decoration: underline;
 }
 
 .footerWrapper .footerBoxes .box {
   background: #f4f6fa;
-  padding: 25px;
+  padding: 25px 25px;
   border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  position: relative; /* Added to position the gradient overlay */
+  overflow: hidden; /* Ensure the gradient overlay does not extend outside the box */
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
 }
 
-.footerWrapper .footerBoxes .box img {
-  max-width: 80px;
-  margin-bottom: 15px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.footerWrapper .footerBoxes .box:hover img {
-  transform: translateY(-5px) scale(1.05);
-}
-
-.footerWrapper .footerBoxes .box .info h4 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.footerWrapper .footerBoxes .box .info p {
-  font-size: 16px;
-  opacity: 0.8;
-  margin-bottom: 0;
-}
-
+/* Added hover effect with gradient overlay */
 .footerWrapper .footerBoxes .box::before {
   content: '';
   position: absolute;
@@ -71,232 +20,124 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  transition: background 0.5s ease-in-out;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Gradient from black to transparent */
   opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for overlay appearance */
+  pointer-events: none; /* Prevent interaction with the overlay */
 }
 
+/* Show gradient overlay on hover */
 .footerWrapper .footerBoxes .box:hover::before {
   opacity: 1;
 }
 
-footer {
-  width: 100%;
-  padding: 60px 40px 0;
-  background-color: #3bb77e;
-  color: #fff;
+/* Optional scaling effect for the image */
+.footerWrapper .footerBoxes .box:hover img {
+  transform: translateY(-5px) scale(1.05); /* Move image up and scale slightly on hover */
 }
 
-footer h3 {
-  font-weight: 600;
-  font-size: 36px;
-  margin-bottom: 20px;
+.footerWrapper .footerBoxes .box .info {
+  padding-left: 25px;
 }
 
-footer h3:hover {
-  color: #087066;
-  text-shadow: 0 0 10px #2ed688, 0 0 20px #3bb77e, 0 0 40px #fff, 0 0 80px #fff;
+.footerWrapper .footerBoxes .box img {
+  position: relative;
   transition: all 0.2s ease-in-out;
 }
 
-footer .part1 h4 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.footerWrapper .footerBoxes .box .info h4 {
+  font-size: 25px;
+  font-weight: 600;
 }
 
-footer .part1 h5,
-footer .part1 h6 {
+.footerWrapper .footerBoxes .box .info p {
+  margin-bottom: 0;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+footer p,
+footer a {
   font-size: 18px;
-  margin-bottom: 15px;
 }
 
-footer .part2 ul {
-  list-style: none;
-  padding: 0;
+footer {
+  padding: 60px 0;
+  padding-bottom: 0;
 }
 
-footer .part2 h3 {
-  font-size: 28px;
+footer .part1 svg {
+  color: #3bb77e !important;
+}
+
+footer h3 {
+  color: #000;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
 footer .part2 ul li {
-  margin-bottom: 10px;
+  list-style: none;
+  margin-bottom: 13px;
 }
 
 footer .part2 ul li a {
-  font-size: 16px;
   color: #000;
   opacity: 0.8;
+  font-size: 500;
   transition: all 0.2s ease-in-out;
 }
 
 footer .part2 ul li a:hover {
-  color: #fff;
+  text-decoration: none;
+  color: #3bb77e !important;
   opacity: 1;
-  text-decoration: underline;
-}
-
-footer .part3 {
-  text-align: center;
-}
-
-footer .part3 h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-footer .part3 h6 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  padding-left: 5px;
 }
 
 footer .lastStrip {
   padding: 15px 0;
-  background-color: #2e8b57;
-  color: #fff;
 }
 
-footer .lastStrip .part_1,
-footer .lastStrip .part_2,
-footer .lastStrip .part_3 {
-  text-align: center;
-  margin-bottom: 20px;
+.phNo svg {
+  font-size: 45px !important;
+  opacity: 0.8;
 }
 
-footer .lastStrip .part_1 h6,
-footer .lastStrip .part_1 h5 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.phNo h3 {
+  font-size: 32px !important;
+  line-height: 35px !important;
 }
 
-footer .lastStrip .part_2 .phNo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+.phNo p {
+  font-size: 16px !important;
+  opacity: 0.8;
 }
 
-footer .lastStrip .part_2 .phNo h3 {
-  font-size: 24px;
-  margin: 0;
+footer .lastStrip .part3 h5 {
+  margin-bottom: 0;
 }
 
-footer .lastStrip .part_2 .phNo p {
-  font-size: 16px;
-  margin: 0;
+footer .lastStrip .part3 ul {
+  margin-bottom: 0;
+  padding-left: 25px;
 }
 
-footer .lastStrip .part_3 ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-footer .lastStrip .part_3 ul li {
-  margin: 0 10px;
-}
-
-footer .lastStrip .part_3 ul li a {
+footer .lastStrip .part3 ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #3bb77e;
+  background: #3bb77e;
   border-radius: 50%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out !important;
 }
 
-footer .lastStrip .part_3 ul li a svg {
-  color: #fff;
+footer .lastStrip .part3 ul li a svg {
+  color: #fff !important;
 }
 
-footer .lastStrip .part_3 ul li a:hover {
-  background-color: #2e8b57;
-  transform: scale(1.1);
-}
-
-.scroll-down-btn {
-  position: fixed;
-  bottom: 4px;
-  right: 139px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 9999;
-  justify-content: center;
-}
-
-.scroll-down-btn:hover {
-  background-color: #2e8b57;
-}
-
-@media (max-width: 1200px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footerWrapper .footerBoxes .box {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .footer-grid li a:hover {
-    color: #fff;
-    opacity: 1;
-    text-decoration: underline;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .footerWrapper .footerBoxes .box:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-
-  footer .part1 h4 {
-    font-size: 22px;
-  }
-
-  footer .part2 h3 {
-    font-size: 24px;
-  }
-
-  footer .part2 ul li a {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .scroll-down-btn {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 992px) {
-  .phNo h3 {
-    font-size: 20px;
-  }
-
-  footer .part2 h3 {
-    font-size: 20px;
-  }
-
-  footer .part2 ul li a {
-    font-size: 18px !important;
-  }
+footer .lastStrip .part3 ul li a:hover {
+  background: rgb(51, 51, 51);
 }
