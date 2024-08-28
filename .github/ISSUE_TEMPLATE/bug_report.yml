@@ -1,5 +1,5 @@
-name: Bug report 🐞
-description: File a bug report
+name: Bug Report
+description: Report a bug in the Causeway
 title: "[Bug]: "
 labels: bug
 body:
@@ -10,7 +10,7 @@ body:
       description: Please search to see if an issue already exists for the bug you encountered.
       options:
         - label: I have searched the existing issues
-          required: true
+        
   - type: textarea
     id: what-happened
     attributes:
@@ -18,14 +18,14 @@ body:
       description: A concise description of what you are experiencing.
       placeholder: Tell us what you see!
     validations:
-      required: true
+    
   - type: textarea
     id: expected-behaviour
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen.
     validations:
-      required: true
+
   - type: textarea
     id: screenshots
     attributes:
@@ -42,14 +42,7 @@ body:
         - Linux
         - Chrome
         - Windows
-  - type: checkboxes
-    id: terms
+ - type: textarea
+    id: other
     attributes:
-      label: Record
-      options:
-        - label: "I have read the Contributing Guidelines"
-          required: true
-        - label: "I'm a GSSOC'24 contributor"
-          required: False
-        - label: "I have starred the repository"
-          required: true
+      label: Anything else?
