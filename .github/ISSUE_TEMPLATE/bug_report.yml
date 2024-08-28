@@ -1,36 +1,51 @@
 name: Bug Report
 description: Report a bug in the Causeway
-title: "[Bug]: "
-labels: bug
+
 body:
-  - type: checkboxes
-    id: existing-issue
+  - type: dropdown
+    id: affected-packages
     attributes:
-      label: Is there an existing issue for this?
-      description: Please search to see if an issue already exists for the bug you encountered.
+      label: Which part of the Causeway scope is affected by this bug?
       options:
-        - label: I have searched the existing issues
-        
+        - animations
+        - bazel
+        - common
+        - compiler-cli
+        - compiler
+        - core
+        - elements
+        - forms
+        - language-service
+        - localize
+        - platform-browser-dynamic
+        - platform-browser
+        - platform-server
+        - router
+        - service-worker
+        - upgrade
+        - zone.js
+        - Don't know / other
+      multiple: true
+
   - type: textarea
     id: what-happened
     attributes:
       label: Describe the bug
       description: A concise description of what you are experiencing.
       placeholder: Tell us what you see!
-    validations:
-    
+
   - type: textarea
     id: expected-behaviour
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen.
-    validations:
 
   - type: textarea
     id: screenshots
     attributes:
       label: Add ScreenShots
-      description: Add sufficient ScreenShots to explain your issue.
+      description: Add sufficient screenshots to explain your issue.
+
   - type: dropdown
     id: devices
     attributes:
@@ -42,7 +57,8 @@ body:
         - Linux
         - Chrome
         - Windows
- - type: textarea
+
+  - type: textarea
     id: other
     attributes:
       label: Anything else?
