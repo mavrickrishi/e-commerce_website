@@ -7,24 +7,14 @@ body:
     attributes:
       label: Which part of the Causeway scope is affected by this bug?
       options:
-        - animations
-        - bazel
-        - common
-        - compiler-cli
-        - compiler
+        - admin
         - core
-        - elements
-        - forms
-        - language-service
-        - localize
-        - platform-browser-dynamic
-        - platform-browser
-        - platform-server
-        - router
-        - service-worker
-        - upgrade
-        - zone.js
-        - Don't know / other
+        - general
+        - onboarding
+        - shared
+        - packaging
+        - changelog
+        - none/empty
       multiple: true
 
   - type: textarea
